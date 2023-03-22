@@ -9,6 +9,7 @@ const main = document.querySelector('main');
 
 menuButton.addEventListener('click', () => {
   menuItems.classList.toggle('hidden');
+  main.classList.toggle('opacity-10');
   menuButtonSpans.forEach((span) => {
     span.classList.toggle('animado');
   })
@@ -17,6 +18,7 @@ menuButton.addEventListener('click', () => {
 links.forEach((link) => {
   link.addEventListener('click', () => {
     menuItems.classList.add('hidden');
+    main.classList.remove('opacity-10');
     menuButtonSpans.forEach((span) => {
       span.classList.remove('animado');
     })
@@ -88,5 +90,5 @@ academyLinks.forEach((link) => {
   link.addEventListener('click', () => {
     firstLink.classList.remove('border-sky-500', 'bg-white', 'dark:bg-slate-700')
   })
-})
+});
 
