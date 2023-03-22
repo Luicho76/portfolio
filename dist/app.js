@@ -62,3 +62,31 @@ darkButton.addEventListener('click', function() {
   }
   
 });
+
+
+//VARIABLES ACADEMY SECTION
+
+const academySection = document.querySelector('#academySection');
+const articles = document.querySelectorAll('#academySection article');
+
+academySection.addEventListener('click', (event) => {
+  const id = event.target.dataset.id;
+
+  if (id){
+    articles.forEach((article) => {
+      article.classList.add('hidden');
+    });
+    const element = document.getElementById(id);
+    element.classList.remove('hidden');
+  }
+});
+
+const academyLinks = document.querySelectorAll('#academySection button');
+const firstLink = document.querySelector('#link1');
+
+academyLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    firstLink.classList.remove('border-sky-500', 'bg-white', 'dark:bg-slate-700')
+  })
+})
+
